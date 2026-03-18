@@ -1,0 +1,86 @@
+[
+  {
+    "id": 7,
+    "tokens": [
+      "Azithromycin",
+      "500mg",
+      "once",
+      "daily",
+      "for",
+      "3",
+      "days"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "I-DURATION",
+      "O"
+    ],
+    "sentence": "Azithromycin 500mg once daily for 3 days"
+  },
+  {
+    "id": 8,
+    "tokens": [
+      "Metoprolol",
+      "25mg",
+      "twice",
+      "a",
+      "day"
+    ],
+    "ner_tags": [
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "sentence": "Metoprolol 25mg twice a day"
+  },
+  {
+    "id": 0,
+    "tokens": [
+      "Tab",
+      "Metformin",
+      "500mg",
+      "twice",
+      "daily",
+      "after",
+      "meals"
+    ],
+    "ner_tags": [
+      "O",
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "O"
+    ],
+    "sentence": "Tab Metformin 500mg twice daily after meals"
+  },
+  {
+    "id": 3,
+    "tokens": [
+      "Amoxicillin",
+      "250mg",
+      "thrice",
+      "daily",
+      "for",
+      "7",
+      "days"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "I-DURATION",
+      "O"
+    ],
+    "sentence": "Amoxicillin 250mg thrice daily for 7 days"
+  }
+]

@@ -1,0 +1,330 @@
+[
+  {
+    "id": 19,
+    "tokens": [
+      "Furosemide",
+      "40mg",
+      "once",
+      "in",
+      "the",
+      "morning"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "O",
+      "O",
+      "O"
+    ],
+    "sentence": "Furosemide 40mg once in the morning"
+  },
+  {
+    "id": 5,
+    "tokens": [
+      "Atorvastatin",
+      "40mg",
+      "once",
+      "at",
+      "bedtime"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "O",
+      "B-FREQUENCY"
+    ],
+    "sentence": "Atorvastatin 40mg once at bedtime"
+  },
+  {
+    "id": 14,
+    "tokens": [
+      "Tab",
+      "Diazepam",
+      "5mg",
+      "at",
+      "night",
+      "only"
+    ],
+    "ner_tags": [
+      "O",
+      "B-DRUG",
+      "B-DOSAGE",
+      "O",
+      "B-FREQUENCY",
+      "O"
+    ],
+    "sentence": "Tab Diazepam 5mg at night only"
+  },
+  {
+    "id": 4,
+    "tokens": [
+      "Amlodipine",
+      "10mg",
+      "once",
+      "daily",
+      "in",
+      "the",
+      "morning"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "O",
+      "O"
+    ],
+    "sentence": "Amlodipine 10mg once daily in the morning"
+  },
+  {
+    "id": 9,
+    "tokens": [
+      "Omeprazole",
+      "20mg",
+      "before",
+      "breakfast",
+      "daily"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "O",
+      "B-FREQUENCY",
+      "B-FREQUENCY"
+    ],
+    "sentence": "Omeprazole 20mg before breakfast daily"
+  },
+  {
+    "id": 13,
+    "tokens": [
+      "Prednisolone",
+      "10mg",
+      "daily",
+      "for",
+      "5",
+      "days",
+      "tapering"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "O",
+      "I-DURATION",
+      "O",
+      "O"
+    ],
+    "sentence": "Prednisolone 10mg daily for 5 days tapering"
+  },
+  {
+    "id": 15,
+    "tokens": [
+      "Clopidogrel",
+      "75mg",
+      "once",
+      "daily"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY"
+    ],
+    "sentence": "Clopidogrel 75mg once daily"
+  },
+  {
+    "id": 18,
+    "tokens": [
+      "Ramipril",
+      "5mg",
+      "once",
+      "daily",
+      "in",
+      "the",
+      "evening"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "O",
+      "O"
+    ],
+    "sentence": "Ramipril 5mg once daily in the evening"
+  },
+  {
+    "id": 6,
+    "tokens": [
+      "Paracetamol",
+      "500mg",
+      "three",
+      "times",
+      "a",
+      "day",
+      "for",
+      "5",
+      "days"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "I-FREQUENCY",
+      "B-DURATION",
+      "B-DURATION",
+      "O",
+      "O",
+      "O"
+    ],
+    "sentence": "Paracetamol 500mg three times a day for 5 days"
+  },
+  {
+    "id": 12,
+    "tokens": [
+      "Insulin",
+      "glargine",
+      "10",
+      "units",
+      "at",
+      "bedtime"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "O",
+      "O",
+      "O",
+      "O",
+      "O"
+    ],
+    "sentence": "Insulin glargine 10 units at bedtime"
+  },
+  {
+    "id": 17,
+    "tokens": [
+      "Hydroxychloroquine",
+      "200mg",
+      "twice",
+      "daily",
+      "for",
+      "6",
+      "months"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "I-DURATION",
+      "O"
+    ],
+    "sentence": "Hydroxychloroquine 200mg twice daily for 6 months"
+  },
+  {
+    "id": 10,
+    "tokens": [
+      "Ciprofloxacin",
+      "500mg",
+      "twice",
+      "daily",
+      "for",
+      "10",
+      "days"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "I-DURATION",
+      "O"
+    ],
+    "sentence": "Ciprofloxacin 500mg twice daily for 10 days"
+  },
+  {
+    "id": 1,
+    "tokens": [
+      "Warfarin",
+      "5mg",
+      "at",
+      "night",
+      "for",
+      "30",
+      "days"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "O",
+      "B-FREQUENCY",
+      "O",
+      "I-DURATION",
+      "O"
+    ],
+    "sentence": "Warfarin 5mg at night for 30 days"
+  },
+  {
+    "id": 11,
+    "tokens": [
+      "Losartan",
+      "50mg",
+      "once",
+      "daily",
+      "in",
+      "morning"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O",
+      "O"
+    ],
+    "sentence": "Losartan 50mg once daily in morning"
+  },
+  {
+    "id": 2,
+    "tokens": [
+      "Tab",
+      "Aspirin",
+      "325mg",
+      "once",
+      "daily"
+    ],
+    "ner_tags": [
+      "O",
+      "B-DRUG",
+      "B-DOSAGE",
+      "B-FREQUENCY",
+      "B-FREQUENCY"
+    ],
+    "sentence": "Tab Aspirin 325mg once daily"
+  },
+  {
+    "id": 16,
+    "tokens": [
+      "Pantoprazole",
+      "40mg",
+      "before",
+      "meals",
+      "twice",
+      "daily"
+    ],
+    "ner_tags": [
+      "B-DRUG",
+      "B-DOSAGE",
+      "O",
+      "B-FREQUENCY",
+      "B-FREQUENCY",
+      "O"
+    ],
+    "sentence": "Pantoprazole 40mg before meals twice daily"
+  }
+]
