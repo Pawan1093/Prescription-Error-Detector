@@ -192,7 +192,11 @@ class PrescriptionAnalyzer:
         dosages = entities.get("DOSAGE", [])
 
         for i, drug in enumerate(drugs):
-            drug_dosages = [dosages[i]] if i < len(dosages) else dosages
+            # only use the corresponding dosage, not all dosages
+            if i < len(dosages):
+                drug_dosages = [dosages[i]]
+            else:
+                drug_dosages = []
             alerts += check_dosage(drug, drug_dosages, ner_confidence)
 
         # step 3: drug interactions

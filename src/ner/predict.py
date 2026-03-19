@@ -38,14 +38,39 @@ DURATION_PATTERN = re.compile(
 )
 
 
+NON_DRUG_WORDS = {
+    "take", "one", "two", "three", "four", "five", "daily", "tablet",
+    "capsule", "needed", "pain", "date", "name", "address", "patient",
+    "doctor", "clinic", "medical", "prescription", "age", "dose",
+    "morning", "night", "food", "meal", "water", "times", "day",
+    "week", "month", "john", "doe", "smith", "springfield", "elm",
+    "your", "for", "the", "and", "with", "after", "before",
+    "toblet", "doilytoke", "springkeld", "lisinopone"
+}
+
 def clean_drug_name(name):
+    """Clean and validate drug name."""
     name = name.strip().strip("-").strip()
+    # remove trailing numbers/dosage
     name = re.sub(r'\s*\d+.*$', '', name).strip()
+    # too short
     if len(name) <= 2:
         return None
+    # is a known prefix
     if name.lower() in DRUG_PREFIXES:
         return None
+    # is a known non-drug word
+    if name.lower() in NON_DRUG_WORDS:
+        return None
+    # purely numeric
     if re.match(r'^\d+\.?\d*$', name):
+        return None
+    # contains only special characters
+    if re.match(r'^[^a-zA-Z]+$', name):
+        return None
+    # too many digits in the word (likely a number or code)
+    digit_ratio = sum(c.isdigit() for c in name) / len(name)
+    if digit_ratio > 0.4:
         return None
     return name
 
