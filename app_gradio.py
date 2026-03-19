@@ -1,9 +1,13 @@
+
+
 import sys
 sys.path.append('.')
 
 import gradio as gr
 import tempfile
 import os
+os.environ["GRADIO_SERVER_NAME"] = "0.0.0.0"
+os.environ["GRADIO_SERVER_PORT"] = str(os.environ.get("PORT", "7860"))
 import numpy as np
 from PIL import Image
 
@@ -108,7 +112,9 @@ with gr.Blocks(title="Prescription Error Detector") as demo:
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 7860))
     demo.launch(
         server_name="0.0.0.0",
-        server_port=int(os.environ.get("PORT", 7860))
+        server_port=port,
+        show_error=True
     )
