@@ -5,12 +5,12 @@ import json
 import numpy as np
 import os
 from transformers import (
-    AutoTokenizer,
-    AutoModelForTokenClassification,
-    TrainingArguments,
-    Trainer,
-    DataCollatorForTokenClassification
-)
+        AutoTokenizer,
+        AutoModelForTokenClassification,
+        TrainingArguments,
+        Trainer,
+        DataCollatorForTokenClassification
+    )
 from datasets import Dataset
 import evaluate
 

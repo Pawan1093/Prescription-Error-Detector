@@ -9,15 +9,13 @@ class PrescriptionPipeline:
     def __init__(self):
         print("Loading OCR engine...")
         self.ocr = PrescriptionOCR()
-        print("Loading NER model...")
-        self.tokenizer, self.ner_model = load_model()
+        print("Loading NER models...")
+        self.tokenizer, self.ner_model, self.bio_ner = load_model()
         print("Loading error detector...")
         self.analyzer = PrescriptionAnalyzer()
         print("\nPipeline ready. All systems operational.\n")
 
     def run(self, image_path):
-        """Full pipeline: image → OCR → NER → error detection → report."""
-
         print(f"Processing: {image_path}")
         print("-" * 50)
 
@@ -27,8 +25,11 @@ class PrescriptionPipeline:
         print(f"OCR text       : {text[:80]}...")
         print(f"OCR confidence : {ocr_result['avg_confidence']}")
 
-        # step 2: NER
-        entities = extract_entities(text, self.tokenizer, self.ner_model)
+        # step 2: 3-layer NER
+        entities = extract_entities(
+            text, self.tokenizer, self.ner_model, self.bio_ner
+        )
+
         print(f"Drugs found    : {entities['DRUG']}")
         print(f"Dosages found  : {entities['DOSAGE']}")
         print(f"Frequency found: {entities['FREQUENCY']}")
@@ -39,14 +40,12 @@ class PrescriptionPipeline:
             ner_confidence=ocr_result["avg_confidence"]
         )
 
-        # step 4: print report
         print(f"\n--- SAFETY REPORT ---")
         print(f"Risk level  : {result['summary']['risk_level']}")
         print(f"Critical    : {result['summary']['critical']}")
         print(f"Warnings    : {result['summary']['warnings']}")
 
         if result["alerts"]:
-            print("\nAlerts:")
             for alert in result["alerts"]:
                 print(f"  [{alert['severity']}] {alert['message']}")
         else:
@@ -66,4 +65,4 @@ class PrescriptionPipeline:
 
 if __name__ == "__main__":
     pipeline = PrescriptionPipeline()
-    result = pipeline.run("data/raw/108.jpg")
+    result = pipeline.run("data/raw/75.jpg")
