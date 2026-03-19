@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: prescription-error-detector
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app_gradio.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+```
+
+## Step 2 — Update requirements.txt
+
+Open `requirements.txt` and replace everything with:
+```
+easyocr
+opencv-python-headless
+torch
+torchvision
+transformers
+accelerate
+datasets
+evaluate
+seqeval
+gradio==4.44.0
+huggingface_hub==0.19.4
+numpy
+Pillow
